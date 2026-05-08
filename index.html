@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mariano Terraf — Investigación</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --azul: #1F3A5F;
+      --dorado: #C9A961;
+      --crema: #F4EFE6;
+      --gris: #555555;
+      --gris2: #888888;
+      --fondo: #FAFAF8;
+    }
+
+    body {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      background: var(--fondo);
+      color: var(--gris);
+      line-height: 1.75;
+    }
+
+    /* ─── HEADER ─────────────────────────────── */
+    header {
+      background: var(--azul);
+      padding: 56px 0 48px;
+    }
+    .header-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+    .tag {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--dorado);
+      margin-bottom: 16px;
+    }
+    header h1 {
+      font-size: 38px;
+      font-weight: normal;
+      color: #FFFFFF;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+    header h1 span {
+      color: var(--dorado);
+    }
+    .subtitle {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 13px;
+      color: #8EA5BE;
+      margin-top: 14px;
+    }
+
+    /* ─── DIVIDER ────────────────────────────── */
+    .divider {
+      height: 4px;
+      background: var(--dorado);
+    }
+
+    /* ─── MAIN ───────────────────────────────── */
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 56px 32px 80px;
+    }
+
+    /* ─── LEAD ───────────────────────────────── */
+    .lead {
+      font-size: 19px;
+      color: var(--azul);
+      line-height: 1.65;
+      margin-bottom: 40px;
+      border-left: 3px solid var(--dorado);
+      padding-left: 20px;
+    }
+
+    /* ─── SECTIONS ───────────────────────────── */
+    section {
+      margin-bottom: 44px;
+    }
+    section h2 {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--dorado);
+      margin-bottom: 14px;
+    }
+    section p {
+      font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 14px;
+      color: var(--gris);
+    }
+    section p:last-child { margin-bottom: 0; }
+
+    /* ─── TAGS ───────────────────────────────── */
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 4px;
+    }
+    .tags span {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 12px;
+      background: var(--crema);
+      color: var(--azul);
+      border: 1px solid #D8D0C2;
+      border-radius: 3px;
+      padding: 4px 10px;
+    }
+
+    /* ─── PUBLICACIONES ──────────────────────── */
+    .pub-list {
+      list-style: none;
+    }
+    .pub-list li {
+      font-size: 15px;
+      line-height: 1.6;
+      padding: 12px 0;
+      border-bottom: 1px solid #E8E4DC;
+      color: var(--gris);
+    }
+    .pub-list li:last-child { border-bottom: none; }
+    .pub-list .pub-year {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--dorado);
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    /* ─── CONTACTO ───────────────────────────── */
+    .contact-block {
+      background: var(--azul);
+      border-radius: 4px;
+      padding: 28px 28px;
+      margin-top: 48px;
+    }
+    .contact-block p {
+      color: #BDC8D4;
+      font-size: 15px;
+      margin-bottom: 14px;
+    }
+    .contact-block a {
+      color: var(--dorado);
+      text-decoration: none;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 14px;
+      display: inline-block;
+      margin-right: 20px;
+    }
+    .contact-block a:hover { text-decoration: underline; }
+
+    /* ─── FOOTER ─────────────────────────────── */
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 11px;
+      color: #BBBBBB;
+      border-top: 1px solid #E8E4DC;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 28px; }
+      .lead { font-size: 17px; }
+      main { padding: 40px 20px 60px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="tag">Investigación</div>
+    <h1>Mariano <span>Terraf</span></h1>
+    <p class="subtitle">Becario Doctoral CONICET &nbsp;·&nbsp; Universidad Nacional de Tucumán &nbsp;·&nbsp; San Miguel de Tucumán, Argentina</p>
+  </div>
+</header>
+<div class="divider"></div>
+
+<main>
+
+  <p class="lead">
+    Estudio cómo el capitalismo financiero produce tipos de personas —y cómo esos tipos de personas terminan destruyendo la democracia desde adentro.
+  </p>
+
+  <!-- ── QUÉ INVESTIGO ── -->
+  <section>
+    <h2>Qué investigo</h2>
+    <p>
+      Desde los años setenta, el capitalismo reorganizó su lógica de acumulación en torno a la valorización financiera: las corporaciones pasaron a medirse por su cotización bursátil, los trabajadores por sus métricas de desempeño, los individuos por su puntaje de crédito. Esa transformación no solo cambió los mercados. Cambió las formas en que nos entendemos a nosotros mismos, evaluamos a los demás y concebimos lo posible en política.
+    </p>
+    <p>
+      Mi investigación doctoral examina ese proceso. El argumento central: el capitalismo especulativo produce un tipo específico de sujeto —el individuo evaluado— que gestiona su vida como un portafolio, internaliza la competencia como norma y desconfía de toda mediación colectiva. Ese sujeto no es el efecto secundario de las transformaciones económicas. Es uno de sus resultados más relevantes. Y es también el sustrato sobre el que crecen las fuerzas antipolíticas contemporáneas.
+    </p>
+    <p>
+      El mecanismo tiene tres pasos: las empresas y plataformas desplazan el riesgo hacia los individuos; los sistemas de evaluación continua convierten la existencia en datos comparables; y el lenguaje emprendedor convierte esa presión en proyecto personal. El resultado es una libertad ambigua: se vive como autonomía mientras funciona como obligación permanente de rendir, adaptarse y traducirse en señales legibles.
+    </p>
+  </section>
+
+  <!-- ── POR QUÉ IMPORTA ── -->
+  <section>
+    <h2>Por qué importa</h2>
+    <p>
+      La democracia no se erosiona solo desde afuera. Se erosiona cuando las condiciones de vida producen personas para quienes la lógica democrática —igualdad, deliberación, responsabilidad compartida— resulta extraña, costosa o incomprensible. Cuando el ciudadano es reemplazado por el consumidor de servicios públicos, el votante por el cliente de líderes eficientes, el militante por el emprendedor de sí mismo.
+    </p>
+    <p>
+      En América Latina, ese proceso tiene condiciones específicas: alta informalidad laboral, expansión del trabajo algorítmico, financiarización de los hogares en contextos de alta inflación, y una cultura de autoayuda financiera que llega a sectores populares a través de influencers y aplicaciones de trading. Estudiar esto acá, con las herramientas de la economía política y la filosofía, produce un análisis que no se puede hacer desde ningún otro lugar.
+    </p>
+  </section>
+
+  <!-- ── DE DÓNDE VENGO ── -->
+  <section>
+    <h2>De dónde vengo</h2>
+    <p>
+      Antes de entrar a la filosofía, trabajé seis años en mercados financieros (Mercalia International, 2017–2023). Esa experiencia no fue un desvío: fue un acceso. Entendí desde adentro cómo opera la lógica que ahora estudio desde afuera. El lenguaje del riesgo, la valorización de corto plazo y la evaluación continua no es una abstracción para mí.
+    </p>
+    <p>
+      Esa combinación —formación filosófica rigurosa más experiencia en mercados— me permite moverme entre el análisis teórico y las implicaciones concretas para política pública, comportamiento organizacional o fenómenos políticos contemporáneos. Es lo que hace que mi trabajo sea útil más allá de la academia.
+    </p>
+  </section>
+
+  <!-- ── ÁREAS ── -->
+  <section>
+    <h2>Áreas de trabajo</h2>
+    <div class="tags">
+      <span>Economía política</span>
+      <span>Sociología económica</span>
+      <span>Filosofía de la economía</span>
+      <span>Capitalismo especulativo</span>
+      <span>Subjetividad y trabajo</span>
+      <span>Democracia y antipolítica</span>
+      <span>América Latina</span>
+    </div>
+  </section>
+
+  <!-- ── PUBLICACIONES ── -->
+  <section>
+    <h2>Publicaciones recientes</h2>
+    <ul class="pub-list">
+      <li>
+        <span class="pub-year">2026</span>
+        Del valor accionista al sujeto evaluado: la expansión de la lógica financiera en el trabajo y la subjetividad. <em>III Jornadas de Ética Política y Sociedad</em>, UNT.
+      </li>
+      <li>
+        <span class="pub-year">2024</span>
+        Artículo en inglés. <em>Resistances: Journal of the Philosophy of History</em>.
+      </li>
+      <li>
+        <span class="pub-year">2025</span>
+        Capítulo en Caram &amp; Marcos (eds.). Editorial universitaria.
+      </li>
+      <li>
+        <span class="pub-year">2023</span>
+        Democracia y autoritarismo bajo la dominación neoliberal (con D. Marcos). <em>Ágora Philosophica</em>, 47.
+      </li>
+      <li>
+        <span class="pub-year">2023</span>
+        Capitalismo informacional: el retroceso de la democracia bajo la racionalidad neoliberal. <em>Humánitas</em>, 41.
+      </li>
+    </ul>
+  </section>
+
+  <!-- ── CONTACTO ── -->
+  <div class="contact-block">
+    <p>Para consultas sobre investigación, colaboraciones o consultorías:</p>
+    <a href="mailto:terrafmariano@gmail.com">terrafmariano@gmail.com</a>
+    <a href="https://linkedin.com/in/mariano-terraf-40a10852" target="_blank">LinkedIn</a>
+    <a href="https://orcid.org/0009-0009-7836-4289" target="_blank">ORCID</a>
+  </div>
+
+</main>
+
+<footer>
+  Mariano Nicolás Terraf &nbsp;·&nbsp; CONICET / UNT &nbsp;·&nbsp; Mayo 2026
+</footer>
+
+<!--
+══════════════════════════════════════════════════════════════
+VERSIÓN PARA LINKEDIN ABOUT (pegar directamente, ~1800 caracteres)
+══════════════════════════════════════════════════════════════
+
+Estudio cómo el capitalismo financiero produce tipos de personas —y cómo esos tipos de personas erosionan la democracia desde adentro.
+
+Mi investigación doctoral (CONICET / UNT) examina la relación entre capitalismo especulativo, subjetividad y política. El argumento central: la extensión de la lógica del valor accionarial —evaluación continua, desplazamiento del riesgo hacia los individuos, lenguaje emprendedor como norma de vida— produce sujetos que desconfían de las mediaciones colectivas, evalúan la política con criterios de rendimiento inmediato y son funcionalmente incompatibles con la lógica democrática. Ese sujeto es el sustrato de la antipolítica contemporánea.
+
+Antes de entrar a la filosofía trabajé seis años en mercados financieros (Mercalia International, 2017–2023). Esa experiencia no fue un desvío: fue un acceso. Entiendo desde adentro la lógica que estudio desde afuera.
+
+Esa combinación —formación filosófica rigurosa más experiencia en mercados— me permite moverme entre el análisis teórico y las implicaciones concretas para política pública, comportamiento organizacional y fenómenos políticos.
+
+Áreas: economía política · sociología económica · filosofía de la economía · capitalismo especulativo · subjetividad y trabajo · democracia en LATAM
+
+Publicaciones en Resistances (2024, en inglés), Ágora Philosophica (2023), Humánitas (2023) y capítulo en Caram & Marcos (2025).
+
+Disponible para consultorías, análisis de política y colaboraciones en investigación aplicada.
+
+→ terrafmariano@gmail.com
+→ orcid.org/0009-0009-7836-4289
+══════════════════════════════════════════════════════════════
+-->
+
+</body>
+</html>
