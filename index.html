@@ -4,6 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mariano Terraf — Investigación</title>
+  <meta name="description" content="Mariano Terraf — Becario Doctoral CONICET / UNT. Investigo cómo el capitalismo especulativo produce subjetividades y erosiona la democracia en América Latina." />
+  <meta name="keywords" content="capitalismo especulativo, subjetividad, democracia, economía política, CONICET, UNT, Argentina, filosofía política" />
+  <meta property="og:title" content="Mariano Terraf — Investigación" />
+  <meta property="og:description" content="Becario Doctoral CONICET / UNT. Capitalismo especulativo, subjetividad y democracia en América Latina." />
+  <meta property="og:url" content="https://marianoterraf.github.io" />
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -26,7 +31,7 @@
     /* ─── HEADER ─────────────────────────────── */
     header {
       background: var(--azul);
-      padding: 56px 0 48px;
+      padding: 56px 0 40px;
     }
     .header-inner {
       max-width: 720px;
@@ -49,21 +54,36 @@
       line-height: 1.2;
       margin-bottom: 10px;
     }
-    header h1 span {
-      color: var(--dorado);
-    }
+    header h1 span { color: var(--dorado); }
     .subtitle {
       font-family: 'Helvetica Neue', Arial, sans-serif;
       font-size: 13px;
       color: #8EA5BE;
-      margin-top: 14px;
+      margin-top: 10px;
+      margin-bottom: 28px;
     }
 
-    /* ─── DIVIDER ────────────────────────────── */
-    .divider {
-      height: 4px;
-      background: var(--dorado);
+    /* ─── NAV ────────────────────────────────── */
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 20px;
+      margin-top: 4px;
     }
+    nav a {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #8EA5BE;
+      text-decoration: none;
+      transition: color .2s;
+    }
+    nav a:hover { color: var(--dorado); }
+
+    /* ─── DIVIDER ────────────────────────────── */
+    .divider { height: 4px; background: var(--dorado); }
 
     /* ─── MAIN ───────────────────────────────── */
     main {
@@ -77,14 +97,15 @@
       font-size: 19px;
       color: var(--azul);
       line-height: 1.65;
-      margin-bottom: 40px;
+      margin-bottom: 48px;
       border-left: 3px solid var(--dorado);
       padding-left: 20px;
     }
 
     /* ─── SECTIONS ───────────────────────────── */
     section {
-      margin-bottom: 44px;
+      margin-bottom: 48px;
+      scroll-margin-top: 24px;
     }
     section h2 {
       font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -93,7 +114,7 @@
       letter-spacing: 2.5px;
       text-transform: uppercase;
       color: var(--dorado);
-      margin-bottom: 14px;
+      margin-bottom: 16px;
     }
     section p {
       font-size: 16px;
@@ -121,13 +142,11 @@
     }
 
     /* ─── PUBLICACIONES ──────────────────────── */
-    .pub-list {
-      list-style: none;
-    }
+    .pub-list { list-style: none; }
     .pub-list li {
       font-size: 15px;
-      line-height: 1.6;
-      padding: 12px 0;
+      line-height: 1.65;
+      padding: 14px 0;
       border-bottom: 1px solid #E8E4DC;
       color: var(--gris);
     }
@@ -138,7 +157,117 @@
       font-weight: 700;
       color: var(--dorado);
       display: block;
-      margin-bottom: 2px;
+      margin-bottom: 3px;
+    }
+    .pub-list a {
+      color: var(--azul);
+      text-decoration: none;
+      border-bottom: 1px solid #C9A96144;
+    }
+    .pub-list a:hover { border-bottom-color: var(--dorado); }
+    .pub-badge {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      background: var(--crema);
+      color: var(--gris2);
+      border: 1px solid #D8D0C2;
+      border-radius: 2px;
+      padding: 1px 6px;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+
+    /* ─── PROYECTO ───────────────────────────── */
+    .proyecto-box {
+      background: var(--crema);
+      border-left: 3px solid var(--dorado);
+      border-radius: 0 4px 4px 0;
+      padding: 18px 20px;
+      margin-top: 4px;
+    }
+    .proyecto-box .proj-label {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--dorado);
+      margin-bottom: 6px;
+    }
+    .proyecto-box .proj-title {
+      font-size: 15px;
+      color: var(--azul);
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+    .proyecto-box .proj-meta {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 12px;
+      color: var(--gris2);
+    }
+
+    /* ─── WORKING PAPERS ─────────────────────── */
+    .doc-list { list-style: none; }
+    .doc-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      padding: 12px 0;
+      border-bottom: 1px solid #E8E4DC;
+      font-size: 15px;
+    }
+    .doc-list li:last-child { border-bottom: none; }
+    .doc-list .doc-title { color: var(--gris); flex: 1; }
+    .doc-list .doc-type {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gris2);
+      white-space: nowrap;
+    }
+    .doc-list a {
+      color: var(--azul);
+      text-decoration: none;
+      border-bottom: 1px solid #C9A96144;
+    }
+    .doc-list a:hover { border-bottom-color: var(--dorado); }
+
+    /* ─── PERFILES ───────────────────────────── */
+    .profiles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+      margin-top: 4px;
+    }
+    .profile-card {
+      background: var(--crema);
+      border: 1px solid #D8D0C2;
+      border-radius: 4px;
+      padding: 14px 16px;
+      text-decoration: none;
+      display: block;
+      transition: border-color .2s;
+    }
+    .profile-card:hover { border-color: var(--dorado); }
+    .profile-card .pc-platform {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--dorado);
+      margin-bottom: 4px;
+    }
+    .profile-card .pc-handle {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 12px;
+      color: var(--azul);
     }
 
     /* ─── CONTACTO ───────────────────────────── */
@@ -151,7 +280,7 @@
     .contact-block p {
       color: #BDC8D4;
       font-size: 15px;
-      margin-bottom: 14px;
+      margin-bottom: 16px;
     }
     .contact-block a {
       color: var(--dorado);
@@ -160,6 +289,7 @@
       font-size: 14px;
       display: inline-block;
       margin-right: 20px;
+      margin-bottom: 6px;
     }
     .contact-block a:hover { text-decoration: underline; }
 
@@ -177,6 +307,8 @@
       header h1 { font-size: 28px; }
       .lead { font-size: 17px; }
       main { padding: 40px 20px 60px; }
+      .profiles-grid { grid-template-columns: 1fr 1fr; }
+      .doc-list li { flex-direction: column; gap: 4px; }
     }
   </style>
 </head>
@@ -187,6 +319,13 @@
     <div class="tag">Investigación</div>
     <h1>Mariano <span>Terraf</span></h1>
     <p class="subtitle">Becario Doctoral CONICET &nbsp;·&nbsp; Universidad Nacional de Tucumán &nbsp;·&nbsp; San Miguel de Tucumán, Argentina</p>
+    <nav>
+      <a href="#investigacion">Investigación</a>
+      <a href="#publicaciones">Publicaciones</a>
+      <a href="#documentos">Documentos</a>
+      <a href="#perfiles">Perfiles</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
   </div>
 </header>
 <div class="divider"></div>
@@ -198,7 +337,7 @@
   </p>
 
   <!-- ── QUÉ INVESTIGO ── -->
-  <section>
+  <section id="investigacion">
     <h2>Qué investigo</h2>
     <p>
       Desde los años setenta, el capitalismo reorganizó su lógica de acumulación en torno a la valorización financiera: las corporaciones pasaron a medirse por su cotización bursátil, los trabajadores por sus métricas de desempeño, los individuos por su puntaje de crédito. Esa transformación no solo cambió los mercados. Cambió las formas en que nos entendemos a nosotros mismos, evaluamos a los demás y concebimos lo posible en política.
@@ -233,6 +372,19 @@
     </p>
   </section>
 
+  <!-- ── PROYECTO ── -->
+  <section>
+    <h2>Proyecto de investigación</h2>
+    <div class="proyecto-box">
+      <div class="proj-label">PIUNT H710</div>
+      <div class="proj-title">La ciudadanía ante los desafíos de la antipolítica</div>
+      <div class="proj-meta">Facultad de Filosofía y Letras, Universidad Nacional de Tucumán &nbsp;·&nbsp; En curso</div>
+    </div>
+    <p style="margin-top:14px;">
+      Doctorado en Humanidades — <em>Configuración de subjetividades en el capitalismo especulativo</em>. Facultad de Filosofía y Letras, UNT. Director: en curso. Financiado por CONICET (Beca Interna Doctoral, selección competitiva nacional).
+    </p>
+  </section>
+
   <!-- ── ÁREAS ── -->
   <section>
     <h2>Áreas de trabajo</h2>
@@ -243,49 +395,93 @@
       <span>Capitalismo especulativo</span>
       <span>Subjetividad y trabajo</span>
       <span>Democracia y antipolítica</span>
+      <span>Financiarización</span>
+      <span>Riesgo político</span>
       <span>América Latina</span>
     </div>
   </section>
 
   <!-- ── PUBLICACIONES ── -->
-  <section>
-    <h2>Publicaciones recientes</h2>
+  <section id="publicaciones">
+    <h2>Publicaciones</h2>
     <ul class="pub-list">
       <li>
-        <span class="pub-year">2026</span>
-        Del valor accionista al sujeto evaluado: la expansión de la lógica financiera en el trabajo y la subjetividad. <em>III Jornadas de Ética Política y Sociedad</em>, UNT.
+        <span class="pub-year">2026 — Congreso</span>
+        Del valor accionista al sujeto evaluado: la expansión de la lógica financiera en el trabajo y la subjetividad. <em>III Jornadas de Ética Política y Sociedad</em>, Universidad Nacional de Tucumán.
       </li>
       <li>
-        <span class="pub-year">2024</span>
-        Artículo en inglés. <em>Resistances: Journal of the Philosophy of History</em>.
+        <span class="pub-year">2025 — Capítulo de libro</span>
+        Capítulo en Caram &amp; Marcos (eds.). Editorial universitaria. <span class="pub-badge">En prensa</span>
       </li>
       <li>
-        <span class="pub-year">2025</span>
-        Capítulo en Caram &amp; Marcos (eds.). Editorial universitaria.
+        <span class="pub-year">2024 — Artículo en revista</span>
+        <a href="https://www.researchgate.net/publication/386896641_Individuo_tirano_y_emprendedorismo_en_el_capitalismo_especulativo" target="_blank">Individuo tirano y emprendedorismo en el capitalismo especulativo.</a> <em>Resistances: Journal of the Philosophy of History</em>, Vol. 5, N.° 10 (julio–diciembre 2024). <span class="pub-badge">Inglés · Open Access</span>
       </li>
       <li>
-        <span class="pub-year">2023</span>
-        Democracia y autoritarismo bajo la dominación neoliberal (con D. Marcos). <em>Ágora Philosophica</em>, 47.
+        <span class="pub-year">2023 — Artículo en revista</span>
+        Democracia y autoritarismo bajo la dominación neoliberal (con D. Marcos). <em>Ágora Philosophica</em>, N.° 47.
       </li>
       <li>
-        <span class="pub-year">2023</span>
-        Capitalismo informacional: el retroceso de la democracia bajo la racionalidad neoliberal. <em>Humánitas</em>, 41.
+        <span class="pub-year">2023 — Artículo en revista</span>
+        Capitalismo informacional: el retroceso de la democracia bajo la racionalidad neoliberal. <em>Humánitas</em>, N.° 41, Facultad de Filosofía y Letras, UNT.
       </li>
     </ul>
   </section>
 
+  <!-- ── DOCUMENTOS DE TRABAJO ── -->
+  <section id="documentos">
+    <h2>Documentos de trabajo</h2>
+    <ul class="doc-list">
+      <li>
+        <span class="doc-title">Racionalidad financiera, subjetividad y erosión democrática en América Latina. Implicaciones para el análisis de política pública.</span>
+        <span class="doc-type">Policy Brief</span>
+      </li>
+      <li>
+        <span class="doc-title">El capitalismo especulativo y la configuración de subjetividades: fictitious capital, gubernamentalidad y antipolítica en América Latina.</span>
+        <span class="doc-type">White Paper</span>
+      </li>
+    </ul>
+    <p style="margin-top:12px; font-size:14px; color:var(--gris2); font-family:'Helvetica Neue',Arial,sans-serif;">
+      Disponibles a solicitud: <a href="mailto:terrafmariano@gmail.com" style="color:var(--azul); border-bottom:1px solid #C9A96144;">terrafmariano@gmail.com</a>
+    </p>
+  </section>
+
+  <!-- ── PERFILES ── -->
+  <section id="perfiles">
+    <h2>Perfiles académicos</h2>
+    <div class="profiles-grid">
+      <a class="profile-card" href="https://orcid.org/0009-0009-7836-4289" target="_blank">
+        <div class="pc-platform">ORCID</div>
+        <div class="pc-handle">0009-0009-7836-4289</div>
+      </a>
+      <a class="profile-card" href="https://www.researchgate.net/profile/Mariano-Terraf" target="_blank">
+        <div class="pc-platform">ResearchGate</div>
+        <div class="pc-handle">Mariano Terraf</div>
+      </a>
+      <a class="profile-card" href="https://www.conicet.gov.ar/new_scp/detalle.php?keywords=&id=69964&datos_academicos=yes" target="_blank">
+        <div class="pc-platform">CONICET</div>
+        <div class="pc-handle">Perfil institucional</div>
+      </a>
+      <a class="profile-card" href="https://academia.edu" target="_blank">
+        <div class="pc-platform">Academia.edu</div>
+        <div class="pc-handle">Mariano Terraf</div>
+      </a>
+    </div>
+  </section>
+
   <!-- ── CONTACTO ── -->
-  <div class="contact-block">
+  <div class="contact-block" id="contacto">
     <p>Para consultas sobre investigación, colaboraciones o consultorías:</p>
     <a href="mailto:terrafmariano@gmail.com">terrafmariano@gmail.com</a>
-    <a href="https://linkedin.com/in/mariano-terraf-40a10852" target="_blank">LinkedIn</a>
+    <a href="https://www.linkedin.com/in/mariano-terraf-40a10852" target="_blank">LinkedIn</a>
     <a href="https://orcid.org/0009-0009-7836-4289" target="_blank">ORCID</a>
+    <a href="https://www.researchgate.net/profile/Mariano-Terraf" target="_blank">ResearchGate</a>
   </div>
 
 </main>
 
 <footer>
-  Mariano Nicolás Terraf &nbsp;·&nbsp; CONICET / UNT &nbsp;·&nbsp; Mayo 2026
+  Mariano Nicolás Terraf &nbsp;·&nbsp; CONICET / UNT &nbsp;·&nbsp; Mayo 2026 &nbsp;·&nbsp; <a href="https://marianoterraf.github.io" style="color:#BBBBBB;">marianoterraf.github.io</a>
 </footer>
 
 <!--
@@ -303,12 +499,10 @@ Esa combinación —formación filosófica rigurosa más experiencia en mercados
 
 Áreas: economía política · sociología económica · filosofía de la economía · capitalismo especulativo · subjetividad y trabajo · democracia en LATAM
 
-Publicaciones en Resistances (2024, en inglés), Ágora Philosophica (2023), Humánitas (2023) y capítulo en Caram & Marcos (2025).
+Publicaciones en Resistances (2024), Ágora Philosophica (2023), Humánitas (2023) y capítulo en Caram & Marcos (2025).
 
-Disponible para consultorías, análisis de política y colaboraciones en investigación aplicada.
-
-→ terrafmariano@gmail.com
-→ orcid.org/0009-0009-7836-4289
+Web: marianoterraf.github.io
+ORCID: orcid.org/0009-0009-7836-4289
 ══════════════════════════════════════════════════════════════
 -->
 
