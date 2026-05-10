@@ -95,6 +95,37 @@
     }
     nav a:hover { color: var(--dorado); }
 
+    /* ─── STICKY NAV ─────────────────────────── */
+    .sticky-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--azul);
+      border-bottom: 2px solid var(--dorado);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    }
+    .sticky-nav-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 32px;
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      height: 40px;
+    }
+    .sticky-nav a {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #8EA5BE;
+      text-decoration: none;
+      transition: color .2s;
+      white-space: nowrap;
+    }
+    .sticky-nav a:hover { color: var(--dorado); }
+
     /* ─── DIVIDER ────────────────────────────── */
     .divider { height: 4px; background: var(--dorado); }
 
@@ -341,6 +372,17 @@
     </nav>
   </div>
 </header>
+
+<div class="sticky-nav">
+  <div class="sticky-nav-inner">
+    <a href="#investigacion">Investigación</a>
+    <a href="#publicaciones">Publicaciones</a>
+    <a href="#documentos">Documentos</a>
+    <a href="#perfiles">Perfiles</a>
+    <a href="#contacto">Contacto</a>
+  </div>
+</div>
+
 <div class="divider"></div>
 
 <main>
