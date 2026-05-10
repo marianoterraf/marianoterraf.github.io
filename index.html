@@ -50,6 +50,25 @@
       max-width: 720px;
       margin: 0 auto;
       padding: 0 32px;
+      display: flex;
+      align-items: center;
+      gap: 48px;
+    }
+    .header-text { flex: 1; min-width: 0; }
+    .header-photo {
+      flex-shrink: 0;
+      width: 148px;
+      height: 148px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid var(--dorado);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.40);
+    }
+    .header-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 15%;
     }
     .tag {
       font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -356,6 +375,9 @@
       main { padding: 40px 20px 60px; }
       .profiles-grid { grid-template-columns: 1fr 1fr; }
       .doc-list li { flex-direction: column; gap: 4px; }
+      .header-inner { flex-direction: column-reverse; gap: 28px; text-align: center; }
+      .header-photo { width: 110px; height: 110px; }
+      nav { justify-content: center; }
     }
   </style>
 </head>
@@ -363,16 +385,21 @@
 
 <header>
   <div class="header-inner">
-    <div class="tag">Investigación</div>
-    <h1>Mariano <span>Terraf</span></h1>
-    <p class="subtitle">Becario Doctoral CONICET &nbsp;·&nbsp; Universidad Nacional de Tucumán &nbsp;·&nbsp; San Miguel de Tucumán, Argentina</p>
-    <nav>
-      <a href="#investigacion">Investigación</a>
-      <a href="#publicaciones">Publicaciones</a>
-      <a href="#documentos">Documentos</a>
-      <a href="#perfiles">Perfiles</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
+    <div class="header-text">
+      <div class="tag">Investigación</div>
+      <h1>Mariano <span>Terraf</span></h1>
+      <p class="subtitle">Becario Doctoral CONICET &nbsp;·&nbsp; Universidad Nacional de Tucumán &nbsp;·&nbsp; San Miguel de Tucumán, Argentina</p>
+      <nav>
+        <a href="#investigacion">Investigación</a>
+        <a href="#publicaciones">Publicaciones</a>
+        <a href="#documentos">Documentos</a>
+        <a href="#perfiles">Perfiles</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+    <div class="header-photo">
+      <img src="foto-perfil.jpg" alt="Mariano Terraf" />
+    </div>
   </div>
 </header>
 
