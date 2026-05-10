@@ -103,6 +103,9 @@
       background: var(--azul);
       border-bottom: 2px solid var(--dorado);
       box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .25s ease;
     }
     .sticky-nav-inner {
       max-width: 720px;
@@ -564,5 +567,19 @@ ORCID: orcid.org/0009-0009-7836-4289
 ══════════════════════════════════════════════════════════════
 -->
 
+<script>
+  const stickyNav = document.querySelector('.sticky-nav');
+  const header    = document.querySelector('header');
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      stickyNav.style.opacity       = entry.isIntersecting ? '0' : '1';
+      stickyNav.style.pointerEvents = entry.isIntersecting ? 'none' : 'auto';
+    },
+    { threshold: 0 }
+  );
+
+  observer.observe(header);
+</script>
 </body>
 </html>
